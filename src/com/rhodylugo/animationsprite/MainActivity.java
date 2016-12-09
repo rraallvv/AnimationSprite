@@ -22,19 +22,19 @@ public class MainActivity extends Activity {
 
 	// we need a sprite bitmap to display and animate
 	// frame width
-	private static final int FRAME_W = 85;
+	private static final int FRAME_W = 520;
 	// frame height
-	private static final int FRAME_H = 121;
+	private static final int FRAME_H = 325;
 	// number of frames
-	private static final int NB_FRAMES = 14;
+	private static final int NB_FRAMES = 8;
 	// number of frames in x
-	private static final int COUNT_X = 5;
+	private static final int COUNT_X = 2;
 	// number of frames in y
-	private static final int COUNT_Y = 3;
+	private static final int COUNT_Y = 4;
 	// frame duration
 	private static final int FRAME_DURATION = 120; // in ms !
 	// scale factor for each frame
-	private static final int SCALE_FACTOR = 5;
+	private static final int SCALE_FACTOR = 1;
 	private ImageView img;
 	// stores each frame
 	private Bitmap[] bmps;
@@ -46,17 +46,19 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		/*
         video = (VideoView) findViewById(R.id.videoView);
 
 		// load video from raw assets folder
         Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
         video.setVideoURI(uri);
         video.start();  
-		
+		*/
+
 		img = (ImageView) findViewById(R.id.img);
 		
 		// load bitmap from assets
-		Bitmap birdBmp = getBitmapFromAssets(this, "grossini_dance.png");
+		Bitmap birdBmp = getBitmapFromAssets(this, "animation.png");
 		
 		if (birdBmp != null) {
 			// cut bitmaps from bird to array of bitmaps
